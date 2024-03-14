@@ -76,8 +76,8 @@ def user_input(user_question):
 
 
 def menu():
-    st.set_page_config('Chat with multiple PDF')
-    st.header('Chat with Multiple PDF using Gemini')
+    st.set_page_config('Chat with PDF')
+    st.header('SmartPDF: Gemini-Driven Contextual Question-Answering')
 
     user_question = st.text_input('Ask a question from the PDF files')
     
@@ -86,7 +86,7 @@ def menu():
 
     with st.sidebar:
         st.title('Menu: ')
-        pdf_docs = st.file_uploader('Upload your PDF files and Click on the Submit & Process Button ')
+        pdf_docs = st.file_uploader('Upload your PDF file and Click on the Submit & Process Button ')
         if st.button('Submit & Process'):
             with st.spinner("Procesing....."):
                 raw_text = get_pdf_text(pdf_docs)
